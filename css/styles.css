@@ -1,0 +1,117 @@
+* {
+  /* outline: solid red 1px !important; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
+img {
+  width: 100%;
+}
+
+.dark-background {
+  background-color: #343a40;
+}
+
+.text-light {
+  color: #fff;
+}
+
+.text-space-gray {
+  color: #bdbdbd;
+}
+
+.text-space-gray:hover {
+  color: #9e9e9e;
+}
+
+.user {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.circle-profile-lg {
+  float: left;
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+  margin: 20px;
+  shape-outside: circle();
+  clip-path: circle();
+}
+
+.circle-profile-sm {
+  float: left;
+  height: auto;
+  width: auto;
+  max-width: 150px;
+  max-height: 150px;
+  margin: 20px;
+  shape-outside: circle();
+  clip-path: circle();
+}
+
+.header-fade {
+  background: linear-gradient(#343a40, 90%, rgba(0, 0, 0, 0));
+}
+
+.footer-fade {
+  background: linear-gradient(rgba(0, 0, 0, 0), 5%, #343a40);
+}
+
+.main-header {
+  font-size: 3rem !important;
+}
+
+.home-bg {
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-container {
+  position: relative;
+  text-align: center;
+}
+
+.img-standard {
+  height: auto;
+  width: auto;
+  max-height: 250px;
+  max-width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* spacers so header and footer falls normally. */
+.first-div {
+  padding-top: 15px;
+}
+
+.last-div {
+  padding-bottom: 70px;
+}
+
+.custom-button {
+  border: 2px solid #343a40;
+  background-color: transparent;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
