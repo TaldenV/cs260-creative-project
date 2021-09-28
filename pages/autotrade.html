@@ -15,7 +15,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="icon" href="../images/thicker-neon.png" />
+    <link rel="icon" href="../images/logo.dec926df.png" />
     <link rel="stylesheet" href="/css/styles.css" />
 
     <title>Sushi's Swap</title>
@@ -25,7 +25,7 @@
       <a class="navbar-brand" href="/index.html">
         <img
           class="user"
-          src="../images/thicker-neon.png"
+          src="../images/logo.dec926df.png"
           width="30"
           height="30"
           alt=""
@@ -51,7 +51,7 @@
             <a class="nav-link" href="/pages/swap.html">Swap</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/pages/farm.html">Farm</a>
+            <a class="nav-link" href="/pages/autotrade.html">Auto Trader</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/pages/about.html">About</a>
@@ -60,10 +60,69 @@
       </div>
     </nav>
 
-    <div class="header-container" style="margin-top: -2em">
-      <img src="../images/neon-street.jpeg" class="home-bg" />
-      <div class="centered">
-        <h1 class="main-header">Sushi's Swap</h1>
+    <div class="container border border-dark p-3" style="margin-top: 3rem">
+      <div class="row">
+        <div class="col">
+          <!-- COIN SELECT -->
+          <div class="row">
+            <div class="col">
+              <div class="form-group p-3">
+                <label for="exampleFormControlSelect1">Coin Select</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Ethereum</option>
+                  <option>Bitcoin</option>
+                  <option>USDC</option>
+                  <option>DOGE</option>
+                  <option>Sushi</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- PURCHASE PRICE -->
+          <div class="row">
+            <div class="col">
+              <label for="exampleFormControlSelect2">Purchase Amount</label>
+              <input type="number" class="form-control" placeholder="Amount" />
+            </div>
+          </div>
+          <!-- INSTRUCTIONS -->
+          <div class="row p-1">
+            <div class="col">
+              <p>
+                These are the prices that will execute an automatic buy/sell
+                order for your purchase
+              </p>
+            </div>
+          </div>
+          <!-- BUY/SELL PRICES -->
+          <div class="row">
+            <div class="col">
+              <label for="exampleFormControlSelect3">Buy Price</label>
+              <input type="number" class="form-control" placeholder="Amount" />
+            </div>
+            <div class="col">
+              <label for="exampleFormControlSelect4">Sell Price</label>
+              <input type="number" class="form-control" placeholder="Amount" />
+            </div>
+          </div>
+          <!-- BUY BUTTON -->
+          <div class="row p-3">
+            <button type="submit" class="center btn btn-primary">
+              Submit Purchase Order
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <img
+            class="center img-thumbnail img-sm"
+            src="/images/Ethereum_logo_2014.svg.png"
+            alt=""
+          />
+          <p class="text-center">
+            The image will change to User's selected coin after JavaScript
+            implemetation using Vue
+          </p>
+        </div>
       </div>
     </div>
 
@@ -74,7 +133,7 @@
         This website is for educational purposes only. All pictures are
         copywright of
         <a class="text-space-gray" href="https://sushi.com/" target="_blank"
-          >Shushi Swap</a
+          >Sushi Swap</a
         >.
         <a
           class="text-space-gray"
