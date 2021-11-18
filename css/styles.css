@@ -16,6 +16,14 @@ img {
   width: 100%;
 }
 
+html,
+body,
+#onramper-widget {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
 .dark-background {
   background-color: #343a40;
 }
@@ -116,6 +124,15 @@ img {
 
 .last-div {
   padding-bottom: 6rem;
+}
+
+html,
+body,
+#container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .custom-button {

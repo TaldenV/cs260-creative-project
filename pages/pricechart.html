@@ -17,6 +17,7 @@
     />
     <link rel="icon" href="../images/logo.dec926df.png" />
     <link rel="stylesheet" href="/css/styles.css" />
+    <script type="text/javascript" src="../javascript/script.js"></script>
 
     <title>Sushi's Swap</title>
   </head>
@@ -47,11 +48,13 @@
           <li class="nav-item">
             <a class="nav-link" href="/index.html">Home</a>
           </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/pages/pricechart.html"
+              >Eth Price Chart</a
+            >
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="/pages/swap.html">Swap</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/pages/autotrade.html">Auto Trader</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/pages/about.html">About</a>
@@ -60,71 +63,32 @@
       </div>
     </nav>
 
-    <div class="container border border-dark p-3" style="margin-top: 3rem">
-      <div class="row">
-        <div class="col">
-          <!-- COIN SELECT -->
-          <div class="row">
-            <div class="col">
-              <div class="form-group p-3">
-                <label for="exampleFormControlSelect1">Coin Select</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>Ethereum</option>
-                  <option>Bitcoin</option>
-                  <option>USDC</option>
-                  <option>DOGE</option>
-                  <option>Sushi</option>
-                </select>
-              </div>
-            </div>
+    <!-- page element -->
+    <div class="first-div container p-3">
+      <form id="coin-select">
+        <div class="form-row justify-content-center">
+          <div class="col-auto">
+            <select class="custom-select" id="select">
+              <option value="not-selected" selected>
+                Select a Crypto/Fiat Currency
+              </option>
+              <option value="btc">Bitcoin</option>
+              <option value="eth">Ethereum</option>
+              <option value="usd">US Dollar</option>
+            </select>
           </div>
-          <!-- PURCHASE PRICE -->
-          <div class="row">
-            <div class="col">
-              <label for="exampleFormControlSelect2">Purchase Amount</label>
-              <input type="number" class="form-control" placeholder="Amount" />
-            </div>
-          </div>
-          <!-- INSTRUCTIONS -->
-          <div class="row p-1">
-            <div class="col">
-              <p>
-                These are the prices that will execute an automatic buy/sell
-                order for your purchase
-              </p>
-            </div>
-          </div>
-          <!-- BUY/SELL PRICES -->
-          <div class="row">
-            <div class="col">
-              <label for="exampleFormControlSelect3">Buy Price</label>
-              <input type="number" class="form-control" placeholder="Amount" />
-            </div>
-            <div class="col">
-              <label for="exampleFormControlSelect4">Sell Price</label>
-              <input type="number" class="form-control" placeholder="Amount" />
-            </div>
-          </div>
-          <!-- BUY BUTTON -->
-          <div class="row p-3">
-            <button type="submit" class="center btn btn-primary">
-              Submit Purchase Order
+          <div class="col-auto">
+            <button class="btn btn-secondary mb-2" id="coin-submit">
+              Select
             </button>
           </div>
         </div>
-        <div class="col">
-          <img
-            class="center img-thumbnail img-sm"
-            src="/images/Ethereum_logo_2014.svg.png"
-            alt=""
-          />
-          <p class="text-center">
-            The image will change to User's selected coin after JavaScript
-            implemetation using Vue
-          </p>
-        </div>
-      </div>
+      </form>
     </div>
+
+    <div id="ohcl-chart"></div>
+
+    <div class="last-div" id="coin-results"></div>
 
     <nav
       class="navbar fixed-bottom navbar-dark footer-fade hidden-xs hidden-sm"
@@ -144,6 +108,8 @@
       </div>
     </nav>
 
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js"></script>
+    <script type="text/javascript" src="../javascript/script.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
